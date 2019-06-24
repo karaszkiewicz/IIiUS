@@ -1,8 +1,10 @@
 #!/bin/bash
 
 data=$(date +%d%m%y'_'%H%M)
-mkdir -p Inw$data
-cd Inw$data
+mkdir -p Inw
+cd Inw
+mkdir -p $data
+cd $data
 
 cut -d: -f1 /etc/passwd > users
 cut -d: -f1 /etc/group | sort > group
